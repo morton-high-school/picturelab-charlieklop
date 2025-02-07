@@ -16,11 +16,18 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+
+  public static void testKeepOnlyBlue(){
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("fishhead.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -50,7 +57,86 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+
+  public static void testNegate(){
+    Picture fish = new Picture("fishhead.jpg");
+    fish.explore();
+    fish.negate();
+    fish.explore();
+  }
+
+  public static void testGrayscale(){
+    Picture fish = new Picture("fishhead.jpg");
+    fish.explore();
+    fish.greyscale();
+    fish.explore();
+  }
+  public static void testMirrorVerticalRightToLeft(){
+     Picture fish = new Picture("fishhead.jpg");
+    fish.explore();
+    fish.mirrorVerticalRightToLeft();
+    fish.explore();
+  }
   
+  public static void testMirrorHorizontal(){
+     Picture fish = new Picture("fishhead.jpg");
+    fish.explore();
+    fish.mirrorHorizontal();
+    fish.explore();
+  }
+
+  public static void testMirrorHorizontalBotToTop(){
+     Picture fish = new Picture("fishhead.jpg");
+    fish.explore();
+    fish.mirrorHorizontalBotToTop();
+    fish.explore();
+  }
+
+   public static void testMirrorDiagonal(){
+     Picture fish = new Picture("fishhead.jpg");
+    fish.explore();
+    fish.mirrorDiagonal();
+    fish.explore();
+  }
+
+  public static void testMirrorArms(){
+     Picture snow = new Picture("snowman.jpg");
+    snow.explore();
+    snow.mirrorArms();
+    snow.explore();
+  }
+
+  public static void testMirrorGull(){
+    Picture gull = new Picture("seagull.jpg");
+    gull.explore();
+    gull.mirrorGull();
+    gull.explore();
+  }
+
+  public static void testCopy(){
+    Picture a = new Picture("seagull.jpg");
+    a.explore();
+    a.createCollage();
+    a.explore();
+    Picture b = new Picture("fishhead.jpg");
+    a.copy(b, 0, 100, 0, 500);
+    a.explore();
+  }
+
+  public static void testSuperCollage(){
+    Picture a1 = new Picture("7inX95in.jpg");
+    a1.explore();
+    a1.createSuperCollage();
+    a1.explore();
+  }
+  
+  public static void testEdgeDetection2(){
+    Picture b = new Picture("fishhead.jpg");
+    b.explore();
+    b.edgeDetection2(30);
+    b.explore();
+  }
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,22 +144,26 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
-    //testKeepOnlyRed();
-    //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    // testSuperCollage();
+    // testZeroBlue();
+    // testKeepOnlyBlue();
+    // testKeepOnlyRed();
+    // testKeepOnlyGreen();
+    // testNegate();
+    // testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
-    //testMirrorDiagonal();
+    // testMirrorVertical();
+    // testMirrorVerticalRightToLeft();
+    // testMirrorHorizontal();
+    // testMirrorHorizontalBotToTop();
+    // testMirrorTemple();
+    // testMirrorArms();
+    // testMirrorGull();
+    // testMirrorDiagonal();
     //testCollage();
-    //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    // testCopy();
+    // testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
