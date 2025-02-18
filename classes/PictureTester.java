@@ -68,7 +68,7 @@ public class PictureTester
   public static void testGrayscale(){
     Picture fish = new Picture("fishhead.jpg");
     fish.explore();
-    fish.greyscale();
+    fish.grayscale();
     fish.explore();
   }
   public static void testMirrorVerticalRightToLeft(){
@@ -134,6 +134,13 @@ public class PictureTester
     Picture b = new Picture("fishhead.jpg");
     b.explore();
     b.edgeDetection2(30);
+    b.explore();
+  }
+
+  public static testFixUnderwater(){
+    Picture b = new Picture("water..jpg");
+    b.explore();
+    b.fixUnderwater();
     b.explore();
   }
 
